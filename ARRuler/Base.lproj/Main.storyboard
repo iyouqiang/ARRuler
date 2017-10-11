@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bx-HY-D0u">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CG7-ur-3be">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteTarget" translatesAutoresizingMaskIntoConstraints="NO" id="CG7-ur-3be">
                                 <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="V5n-gH-rEv"/>
@@ -77,6 +78,7 @@
                             <constraint firstAttribute="trailing" secondItem="Y0u-IL-4cg" secondAttribute="trailing" id="rg3-Kf-YhI"/>
                             <constraint firstItem="Y0u-IL-4cg" firstAttribute="top" secondItem="y5P-xU-3IO" secondAttribute="top" constant="20" id="veI-YW-Rh9"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zdk-qE-UWd"/>
                     </view>
                     <connections>
                         <outlet property="InfoLabel" destination="Y0u-IL-4cg" id="fPb-59-dx2"/>
@@ -88,4 +90,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="WhiteTarget" width="30" height="30"/>
+    </resources>
 </document>
