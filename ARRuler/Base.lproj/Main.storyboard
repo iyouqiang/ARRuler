@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARRuler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y5P-xU-3IO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bx-HY-D0u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CG7-ur-3be">
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="V5n-gH-rEv"/>
+                                    <constraint firstAttribute="height" constant="30" id="YBx-mJ-6EQ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-8Q-tS9">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwH-7X-Uha">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="KjQ-35-JdJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-cq-oz9">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                        <state key="normal" title="Unit">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="unitAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="6aR-QO-tGQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zi9-ao-kW3"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0u-IL-4cg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VTa-B5-gh9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CG7-ur-3be" firstAttribute="centerX" secondItem="y5P-xU-3IO" secondAttribute="centerX" id="3Yk-M4-eGw"/>
+                            <constraint firstItem="CG7-ur-3be" firstAttribute="centerY" secondItem="y5P-xU-3IO" secondAttribute="centerY" id="3rv-NH-QGB"/>
+                            <constraint firstAttribute="trailing" secondItem="bg2-8Q-tS9" secondAttribute="trailing" id="DSf-af-ftg"/>
+                            <constraint firstItem="bg2-8Q-tS9" firstAttribute="leading" secondItem="y5P-xU-3IO" secondAttribute="leading" id="FqV-E5-NQw"/>
+                            <constraint firstAttribute="bottom" secondItem="3bx-HY-D0u" secondAttribute="bottom" id="M2T-Tb-wJC"/>
+                            <constraint firstAttribute="bottom" secondItem="bg2-8Q-tS9" secondAttribute="bottom" id="Q2U-Dz-QtU"/>
+                            <constraint firstAttribute="trailing" secondItem="3bx-HY-D0u" secondAttribute="trailing" id="XWn-it-AlD"/>
+                            <constraint firstItem="3bx-HY-D0u" firstAttribute="leading" secondItem="y5P-xU-3IO" secondAttribute="leading" id="Y8F-4S-p5v"/>
+                            <constraint firstItem="Y0u-IL-4cg" firstAttribute="leading" secondItem="y5P-xU-3IO" secondAttribute="leading" id="dNG-lK-EcD"/>
+                            <constraint firstItem="3bx-HY-D0u" firstAttribute="top" secondItem="y5P-xU-3IO" secondAttribute="top" id="eG3-EO-wbO"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0u-IL-4cg" secondAttribute="trailing" id="rg3-Kf-YhI"/>
+                            <constraint firstItem="Y0u-IL-4cg" firstAttribute="top" secondItem="y5P-xU-3IO" secondAttribute="top" constant="20" id="veI-YW-Rh9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="InfoLabel" destination="Y0u-IL-4cg" id="fPb-59-dx2"/>
+                        <outlet property="sceneView" destination="3bx-HY-D0u" id="zCR-vd-1FQ"/>
+                        <outlet property="targetImageView" destination="CG7-ur-3be" id="ClC-ZK-fEq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
