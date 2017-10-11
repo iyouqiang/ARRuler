@@ -21,5 +21,6 @@ extension ARSCNView {
 
         // 拿到相机位置
         return SCNVector3.positionTransform(result.worldTransform)
+        //return SCNVector3Make(result.worldTransform.columns.3.x, result.worldTransform.columns.3.y, result.worldTransform.columns.3.z)
     }
 }

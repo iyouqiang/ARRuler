@@ -44,7 +44,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
+        /**
+         猿人族省心神器
+
+         思路梳理
+         1、场景展现
+         测量的起点 终点 线条 测量单位 测量距离 线条的延伸
+
+         2、场景实现 AR中万物皆节点
+         节点： 始末节点 线条节点 显示距离的文本节点
+         位置： 始末位置 线条位置
+
+         3、实现思路
+         核心：AB坐标位置 AB两点间距离
+
+         三维坐标表示：
+         SCNVector3
+
+         获取现实实际坐标：
+         hitTest(_ point: CGPoint, types: ARHitTestResult.ResultType) -> [ARHitTestResult]
+
+         三位坐标距离计算：
+         A(x1,y1,z1),B(x2,y2,z2),则A,B之间的距离为
+         d=√[(x1-x2)^2+(y1-y2)^2+(z1-z2)^2]
+
+         状态更新：
+         起始点位置不变，实时更新线条和终点的位置 计算距离
+
+         4、类结构图
+
+         5、难点梳理
+         齐次空间
+         画线
+         */
+
         setup()
     }
     
